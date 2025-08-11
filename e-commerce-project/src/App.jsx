@@ -1,13 +1,24 @@
-import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Home from './components/Home'
+import Cart from './components/Cart'
+import Navbar from './components/navbar'
+import ProductList from './components/ProductList'
+
 
 function App() {
   
   return (
     <>
-      <h1 className="text-bold underline">Welcome to the E-commerce Project</h1>
-      <p>This is a simple e-commerce application built with React.</p>
+      <Router>
+        <Navbar />
+        <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/productlist" element={<ProductList />} />
+            <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </Router>
     </>
-  )
+  );
 }
 
 export default App
