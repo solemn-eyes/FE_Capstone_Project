@@ -1,6 +1,5 @@
 {/* Creating the navigation bar */}
 import { Link } from 'react-router-dom';
-import ProductList from './ProductList';
 
 function Navbar(){
     return(
