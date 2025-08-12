@@ -3,9 +3,9 @@ import logo from '../components/Images/Purr logo.png';
 function SearchBar() {
     return (
         <div className="flex items-center justify-center h-16 bg-gray-800">
-            <div className="fixed top-0 left-0 p-2 z-50">
-                <img src={logo} alt="Logo" className="h-12 w-auto rounded-full" />
-            </div>
+            
+            <img src={logo} alt="Logo" className="fixed top-0 left-0 p-1 h-12 w-auto rounded-full" />
+            
             <input
                 type="text"
                 placeholder="Search for products..."

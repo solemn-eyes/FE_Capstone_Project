@@ -1,5 +1,6 @@
 import hero from '../components/Images/Shopping.jpg'
 import ProductGrid from './ProductGrid';
+import Banner from './Banners';
 
 function Home() {
     return (
@@ -11,6 +12,7 @@ function Home() {
                 <div className="relative z-10 w-full flex flex-col items-center">
                     {/* Creating the main content area */}
                     <main className="flex flex-col items-center justify-center p-4">
+                        <Banner />
                         {/* Making the Product List */}
                         <div className="w-full rounded-lg shadow-lg bg-white bg-opacity-60 backdrop-blur-sm">
                             <ProductGrid />
@@ -18,7 +20,7 @@ function Home() {
                         
                     </main>
 
-                    <footer className="text-white p-4 text-center fixed bottom-0">
+                    <footer className="fixed bottom-0 left-0 w-full z-40 bg-white bg-opacity-80 text-black p-4 text-center shadow">
                         <p>&copy; 2023 E-commerce Project. All rights reserved.</p>
                     </footer>
                 </div>
