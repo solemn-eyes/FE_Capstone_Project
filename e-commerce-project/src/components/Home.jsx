@@ -1,5 +1,5 @@
 import hero from '../components/Images/Shopping.jpg'
-import ProductGrid from './ProductGrid';
+import ProductGrid from '../services/ProductGrid'
 import Banner from './Banners';
 
 function Home() {
