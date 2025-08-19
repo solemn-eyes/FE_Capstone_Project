@@ -19,7 +19,7 @@ function Banner() {
     }, []);
 
     return (
-        <div className="w-full overflow-hidden relative rounded-full">
+        <div className="h-full w-full overflow-hidden relative rounded-full">
             <img src={banners[index].img} 
                  alt={banners[index].alt} 
                  className="w-full max-h-80 object-cover transition-all duration-700" />

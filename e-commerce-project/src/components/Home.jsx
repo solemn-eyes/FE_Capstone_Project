@@ -1,5 +1,5 @@
-import hero from '../components/Images/Shopping.jpg'
-import ProductGrid from '../services/ProductGrid'
+import hero from '../components/Images/Shopping.jpg';
+import ProductGrid from '../services/ProductGrid';
 import Banner from './Banners';
 
 function Home() {
@@ -20,8 +20,8 @@ function Home() {
                         
                     </main>
 
-                    <footer className="fixed bottom-0 left-0 w-full z-40 bg-white bg-opacity-80 text-black p-4 text-center shadow">
-                        <p>&copy; 2023 E-commerce Project. All rights reserved.</p>
+                    <footer className="fixed bottom-0 left-0 w-full z-40 bg-white bg-opacity-80 text-black p-0 text-center shadow">
+                        <p>&copy; 2025 E-commerce Project. All rights reserved.</p>
                     </footer>
                 </div>
             
