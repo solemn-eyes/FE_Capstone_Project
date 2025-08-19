@@ -4,6 +4,7 @@ import Cart from './components/Cart'
 import Navbar from './components/navbar'
 import ProductList from './components/ProductList'
 import SearchBar from './components/searchbar'
+import ProductDetails from './components/ProductDetails'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/productlist" element={<ProductList />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
         </Routes>
       
 
