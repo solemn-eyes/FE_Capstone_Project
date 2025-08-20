@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function ProductGrid() {
+function ProductGrid2() {
     const [products, setProducts] = useState([]);
     const [page, setPage] = useState(1);
 
@@ -44,4 +44,4 @@ function ProductGrid() {
     );
 }
 
-export default ProductGrid;
+export default ProductGrid2;
