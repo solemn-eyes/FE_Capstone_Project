@@ -1,6 +1,7 @@
 {/* Example of using Fake Store API to fetch products */}
 
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function ProductGrid() {
     const [products, setProducts] = useState([]);
@@ -17,11 +18,17 @@ function ProductGrid() {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 ">
             {limitedProducts.map((product) => (
-                <div key={product.id} className="bg-white p-4 shadow hover:shadow-lg">
-                    <img src={product.image} alt={product.title} className="w-full h-40 object-contain" />
-                    <h3 className="font-bold text-sm mt-2">{product.title}</h3>
-                    <p className="text-orange-500">${product.price}</p>
-                </div>
+                <Link to={`/products/${product.id}`} key={product.id}>
+                    <div className="border p-2 hover:shadow-lg cursor-pointer">
+                        <img 
+                            src={product.image}
+                            alt={product.title}
+                            className="h-32 object-contain mx-auto"
+                        />
+                        <h3 className="font-semibold">{product.title}</h3>
+                        <p>${product.price}</p>
+                    </div>
+                </Link>
             ))}
         </div>
     );
