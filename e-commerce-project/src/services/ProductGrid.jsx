@@ -2,9 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 function ProductGrid() {
     const [products, setProducts] = useState([]);
+
+    const dispatch = useDispatch();
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -27,6 +30,17 @@ function ProductGrid() {
                         />
                         <h3 className="font-semibold">{product.title}</h3>
                         <p>${product.price}</p>
+
+                        <div>
+                            <button 
+                                className="bg-blue-600 rounded-full text-white px-6 py-3 border border-spacing-1"
+                                onClick={() => dispatch(addItem(product))}
+                                disabled={!product}
+                            >
+                                Add to cart
+                            </button>
+                        </div>               
+                        
                     </div>
                 </Link>
             ))}
