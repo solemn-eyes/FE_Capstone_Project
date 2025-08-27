@@ -1,13 +1,18 @@
 {/* This section will have the product details*/}
+
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { addItem } from "../services/cartSlice";
 
 const ProductDetails = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    const dispatch = useDispatch();
 
     useEffect(() =>{
         const fetchProduct = async () => {
@@ -34,7 +39,13 @@ const ProductDetails = () => {
             </div>
             <div className="flex items-center justify-between p-4">
                 <p className="font-bold text-3xl">Price: ${product?.price}</p>
-                <button className="bg-blue-600 rounded-full text-white px-6 py-3 border border-spacing-1">Add to cart</button>
+                <button
+                    className="bg-blue-600 rounded-full text-white px-6 py-3 border border-spacing-1"
+                    onClick={() => dispatch(addItem(product))}
+                    disabled={!product}
+                >
+                    Add to cart
+                </button>
             </div>
         </div>
     );
